@@ -144,4 +144,12 @@ myForme6.addEventListener('submit' , function(e){
 /****************************************************/
 
 
+/****************** code for close modal ***************/
 
+let myForme7 = document.getElementById('formData');
+let x = document.getElementsByClassName ('fermer') ;
+
+x.addEventListener('click', event => {
+
+    myForme7.style.display = "none";
+  })
