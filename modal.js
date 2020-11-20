@@ -20,14 +20,14 @@ function launchModal() {
   modalbg.style.display = "block";
 }
 
+/****************** error for prénom ***************/
+
+let myForme = document.getElementById ('formData'); 
 
 
-let myForme = document.getElementById ('formData');
-
-
-myForme.addEventListener('submit' , function(e){
+myForme.addEventListener('submit' , function(e){  
   
-  let prenom = document.getElementById ('first');
+  let prenom = document.getElementById ('first'); 
   if (prenom.value.trim() == ""){
    
 
@@ -38,7 +38,9 @@ myForme.addEventListener('submit' , function(e){
 
   }
 });
+/****************************************************/
 
+/****************** error for nom ***************/
 let myForme2 = document.getElementById ('formData');
 
 
@@ -55,7 +57,9 @@ myForme2.addEventListener('submit' , function(e){
 
   }
 });
+/****************************************************/
 
+/****************** error for email ***************/
 let myForme3 = document.getElementById ('formData');
 
 
@@ -72,7 +76,10 @@ myForme3.addEventListener('submit' , function(e){
 
   }
 });
+/****************************************************/
 
+
+/****************** error for birthdate ***************/
 let myForme4 = document.getElementById ('formData');
 
 
@@ -89,7 +96,9 @@ myForme4.addEventListener('submit' , function(e){
 
   }
 });
+/****************************************************/
 
+/****************** error for quantity ***************/
 let myForme5 = document.getElementById ('formData');
 
 
@@ -100,10 +109,39 @@ myForme5.addEventListener('submit' , function(e){
    
 
   let myError = document.getElementById ('error5') ;
-  myError.innerHTML = "Veuillez entrer un nomnbre.";
+  myError.innerHTML = "Veuillez entrer un nombre.";
   myError.style.color = 'red';
   e.preventDefault();
 
   }
 });
+/****************************************************/
+
+/****************** error for quantity ***************/
+let myForme6 = document.getElementById('formData');
+
+
+myForme6.addEventListener('submit' , function(e){
+  let elts = document.getElementsByClassName ('checkbox-icon') ;
+  let verif = false
+  for (let i = 0; i < elts.length; i++) {
+  
+    if (elts[i].checked){
+      verif = true 
+     
+    } 
+  
+  }
+  if (verif==false) {
+  
+    let myError = document.getElementById ('error6') ;
+    myError.innerHTML = "un champ est requis.";
+    myError.style.color = 'red';
+    e.preventDefault();
+  }
+});
+
+/****************************************************/
+
+
 
