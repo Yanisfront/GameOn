@@ -8,7 +8,7 @@ function editNav() {
 }
 
 // DOM Elements
-const modalbg = document.querySelector(".bground");
+const modalbg = document.querySelector("#bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
 
@@ -147,9 +147,25 @@ myForme6.addEventListener('submit' , function(e){
 /****************** code for close modal ***************/
 
 let myForme7 = document.getElementById('formData');
-let x = document.getElementsByClassName ('fermer') ;
+let design = document.getElementById ('bground')
+let x = document.getElementById ('fermer') ;
 
-x.addEventListener('click', event => {
+x.onclick = function() {
 
-    myForme7.style.display = "none";
-  })
+  document.location.href ='file:///Users/hamza/Desktop/GameOn-Yanis/starterOnly/index.html' ;
+}
+
+
+/****************************************************/
+
+/*********************** code for success message ********/
+
+let myForme8 = document.getElementById('formData');
+let btn = document.getElementById('button');
+btn.onclick = function () {
+  alert ('message envoyé') ;
+  document.location.href ='file:///Users/hamza/Desktop/GameOn-Yanis/starterOnly/index.html' ;
+  
+}
+
+ /**********************************************************/  
